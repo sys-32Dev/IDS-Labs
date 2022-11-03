@@ -1,0 +1,11 @@
+# Lab 1E What's the Relationship?
+load_lab(5)
+histogram(~height | gender, data=cdc)
+xyplot(sodium ~ sugar, data = food)
+xyplot(protein ~ calories, data = food)
+xyplot(calories ~ protein, data = food)
+xyplot(calories ~ protein | salty_sweet  , data = food)
+xyplot(sodium ~ sugar | salty_sweet, group= cost, data= food)
+histogram(~calories | salty_sweet + healthy_level, data=food)
+histogram(~ingredients | healthy_level, data=food)
+xyplot(calories ~ ingredients, data=food)
