@@ -11,3 +11,13 @@ sample(songs, size = 10, replace = TRUE)
  
  rap rock
   24   26
+set.seed(15)
+set.seed(30)
+movies<- rep("movie", times= 400)
+parks<- rep("park", times= 600)
+home<- rep("home" times=200)
+friday<-c(movies, parks, home)
+set.seed(123)
+draws <- do(500) * sample(friday, size = 1, replace = TRUE)
+View(draws)
+tally(~sample, data=draws)
