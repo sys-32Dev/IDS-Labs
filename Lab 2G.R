@@ -1,0 +1,10 @@
+load_lab(15)
+View(color)
+View(stress)
+stress_colors<-merge(color,stress, by = "user.id")
+View(stress_colors)
+colors_stress<-merge(stress,color, by = "user.id")
+View(colors_stress)
+save(stress_colors, file = "stress_colors.Rda")
+histogram(~stress | int_ext, data = stress_colors)
+
